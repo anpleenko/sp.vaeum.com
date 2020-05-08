@@ -21,3 +21,12 @@ jobs:
        docker tag bookmarks docker.pkg.github.com/7qw/sp.vaeum.com/bookmarks:latest
        docker images
        docker push docker.pkg.github.com/7qw/sp.vaeum.com/bookmarks:latest
+
+    - name: SSH connect
+      uses: fifsky/ssh-action@master
+      with:
+        command: |
+          cd /usr/src/docker && ./up.sh
+        host: ${{ secrets.HOST }}
+        user: deploy
+        key: ${{ secrets.PRIVATE_KEY}}
