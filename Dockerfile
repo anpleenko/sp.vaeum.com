@@ -2,7 +2,7 @@ FROM node:alpine as build
 WORKDIR /app
 COPY . .
 
-RUN npm install
+RUN NODE_ENV=production npm install
 RUN npm run build
 
 FROM anpleenko/nginx-static-spa:latest
