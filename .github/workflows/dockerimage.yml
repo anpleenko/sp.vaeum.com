@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: |
        docker login docker.pkg.github.com -u anpleenko -p ${{ secrets.TOKEN }}
-       docker build . --file Dockerfile --tag 7qw/sp.vaeum.com:test
-       docker tag 7qw/sp.vaeum.com:test 7qw/sp.vaeum.com:latest
-       docker push docker.pkg.github.com/7qw/sp.vaeum.com:latest
+       docker build . --file Dockerfile --tag bookmarks
+       docker tag bookmarks 7qw/sp.vaeum.com:latest
+       docker push 7qw/sp.vaeum.com:latest
