@@ -1,3 +1,3 @@
-# sp.vaeum.com
+# bookmarks
 
-![Docker Image CI](https://github.com/7qw/sp.vaeum.com/workflows/Docker%20Image%20CI/badge.svg)
+![Create Docker image](https://github.com/7qw/bookmarks/workflows/Create%20Docker%20image/badge.svg)
