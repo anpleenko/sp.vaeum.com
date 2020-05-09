@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-#     - name: Build the Docker image
-#       run: |
-#        docker login docker.pkg.github.com -u anpleenko -p ${{ secrets.TOKEN }}
-#        docker build . --file Dockerfile --tag bookmarks
-#        docker tag bookmarks docker.pkg.github.com/7qw/bookmarks/bookmarks:latest
-#        docker push docker.pkg.github.com/7qw/bookmarks/bookmarks:latest
+    - name: Build the Docker image
+      run: |
+       docker login docker.pkg.github.com -u anpleenko -p ${{ secrets.TOKEN }}
+       docker build . --file Dockerfile --tag bookmarks
+       docker tag bookmarks docker.pkg.github.com/7qw/bookmarks/bookmarks:latest
+       docker push docker.pkg.github.com/7qw/bookmarks/bookmarks:latest
   
     - name: SSH connect
       uses: garygrossgarten/github-action-ssh@release
