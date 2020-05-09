@@ -15,9 +15,8 @@ jobs:
       run: |
        docker login docker.pkg.github.com -u anpleenko -p ${{ secrets.TOKEN }}
        docker build . --file Dockerfile --tag bookmarks
-       docker tag bookmarks docker.pkg.github.com/7qw/sp.vaeum.com/bookmarks:latest
-       docker images
-       docker push docker.pkg.github.com/7qw/sp.vaeum.com/bookmarks:latest
+       docker tag bookmarks docker.pkg.github.com/7qw/bookmarks/bookmarks:latest
+       docker push docker.pkg.github.com/7qw/bookmarks/bookmarks:latest
  
     - name: SSH connect
       uses: fifsky/ssh-action@master
