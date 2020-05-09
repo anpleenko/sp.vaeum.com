@@ -17,12 +17,16 @@ jobs:
        docker build . --file Dockerfile --tag bookmarks
        docker tag bookmarks docker.pkg.github.com/7qw/bookmarks/bookmarks:latest
        docker push docker.pkg.github.com/7qw/bookmarks/bookmarks:latest
- 
-    - name: SSH connect
-      uses: fifsky/ssh-action@master
-      with:
-        command: |
-          cd /usr/src/docker && ./up.sh
-        host: ${{ secrets.HOST }}
-        user: deploy
-        key: ${{ secrets.PRIVATE_KEY}}
+  
+  deploy:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps: 
+      - name: SSH connect
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd /usr/src/docker && ./up.sh
+          host: ${{ secrets.HOST }}
+          user: deploy
+          key: ${{ secrets.PRIVATE_KEY}}
