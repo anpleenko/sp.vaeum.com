@@ -24,6 +24,6 @@ jobs:
         command: cd /usr/src/docker && ./up.sh
         host: ${{ secrets.HOST }}
         username: deploy
-        privateKey: ${{ secrets.PRIVATE_KEY}}
+        privateKey: ${{ secrets.SSH_PRIVATE_KEY}}
     
 
