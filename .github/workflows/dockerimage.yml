@@ -21,9 +21,8 @@ jobs:
     
     - name: Build the Docker image
       run: |
-       npm ci
+       npm ci --only=production
        npm run build
-       ls -a
        docker login docker.pkg.github.com -u anpleenko -p ${{ secrets.TOKEN }}
        docker build . --file Dockerfile --tag bookmarks
        docker tag bookmarks docker.pkg.github.com/7qw/bookmarks/bookmarks:latest
