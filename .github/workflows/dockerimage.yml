@@ -23,6 +23,7 @@ jobs:
       run: |
        npm ci
        npm run build
+       ls -a
        docker login docker.pkg.github.com -u anpleenko -p ${{ secrets.TOKEN }}
        docker build . --file Dockerfile --tag bookmarks
        docker tag bookmarks docker.pkg.github.com/7qw/bookmarks/bookmarks:latest
