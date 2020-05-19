@@ -268,7 +268,7 @@ export const menuLinks: MenuLinks[] = [
       },
       {
         title: 'Jira',
-        url: 'https://jira.pcbltools.ru/jira',
+        url: 'https://jira.pcbltools.ru/jira/secure/RapidBoard.jspa?rapidView=71',
         description: '',
       },
       {
