@@ -78,21 +78,6 @@ export const contentLinks: ContentLink[] = [
     logo: 'reg_ru',
   },
   {
-    description: 'Фильмы онлайн',
-    title: 'Kinogo',
-    url: 'http://kinogo.club/',
-  },
-  {
-    description: 'Фильмы онлайн',
-    title: 'Fanserials',
-    url: 'http://fanserials.org',
-  },
-  {
-    description: 'Фильмы онлайн',
-    title: 'seasonvar',
-    url: 'http://seasonvar.ru',
-  },
-  {
     description: 'Торрент трекер',
     title: 'Rutracker',
     url: 'https://rutracker.org/forum/index.php',
