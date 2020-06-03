@@ -90,7 +90,7 @@ export const contentLinks: ContentLink[] = [
   {
     description: 'Торрент трекер',
     title: 'Everall',
-    url: 'http://evrl.to',
+    url: 'https://wtftime.ru',
     logo: 'everall',
   },
   {
