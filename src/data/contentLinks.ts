@@ -77,10 +77,10 @@ export const contentLinks: ContentLink[] = [
     url: 'https://www.reg.ru/',
     logo: 'reg_ru',
   },
-    {
+  {
     description: 'регистратор имен',
     title: 'RuVDS',
-    url: 'https://https://ruvds.com/',
+    url: 'https://ruvds.com/',
   },
   {
     description: 'Торрент трекер',
@@ -91,12 +91,6 @@ export const contentLinks: ContentLink[] = [
     description: 'Торрент трекер',
     title: 'Rutor',
     url: 'http://new-rutor.org',
-  },
-  {
-    description: 'Торрент трекер',
-    title: 'Wtftime.ru',
-    url: 'https://wtftime.ru',
-    logo: 'everall',
   },
   {
     description: 'Торрент трекер',
