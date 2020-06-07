@@ -17,7 +17,7 @@ export const menuLinks: MenuLinks[] = [
       },
       {
         title: 'Авито',
-        url: 'https://www.avito.ru/krasnodar',
+        url: 'https://www.avito.ru',
         description: '',
       },
       {
