@@ -36,7 +36,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.21",
-    "react-scripts": "3.4.1",
+    "react-scripts": "3.4.2",
     "react-truncate": "^2.4.0",
     "react-window-size-listener": "^1.5.4",
     "styled-components": "^5.1.1",
