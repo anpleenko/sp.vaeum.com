@@ -40,12 +40,12 @@
     "react-truncate": "^2.4.0",
     "react-window-size-listener": "^1.5.4",
     "styled-components": "^5.2.0",
-    "typescript": "4.0.2"
+    "typescript": "4.0.3"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^16.13.0",
     "@types/node": "14.11.1",
-    "@types/jest": "26.0.13",
+    "@types/jest": "26.0.14",
     "@types/react-router-dom": "^5.1.5",
     "@types/react-truncate": "^2.3.3",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
@@ -54,15 +54,15 @@
     "eslint-config-airbnb-typescript": "^9.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jest": "^24.0.1",
+    "eslint-plugin-jest": "^24.0.2",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
     "husky": "^4.3.0",
     "imagemin-lint-staged": "^0.4.0",
-    "lint-staged": "^10.3.0",
-    "prettier": "^2.1.1",
-    "sort-package-json": "^1.44.0"
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "sort-package-json": "^1.46.0"
   }
 }
