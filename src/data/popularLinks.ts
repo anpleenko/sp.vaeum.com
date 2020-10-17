@@ -33,12 +33,6 @@ export const popularLinks: ContentLink[] = [
   },
   {
     description: 'Он-лайн магазин',
-    title: 'Беру',
-    url: 'https://beru.ru/',
-    logo: 'beru',
-  },
-  {
-    description: 'Он-лайн магазин',
     title: 'Яндекс Маркет',
     url: 'https://market.yandex.ru/',
     logo: 'yandex_market',
