@@ -45,7 +45,7 @@
   "devDependencies": {
     "@hot-loader/react-dom": "^16.13.0",
     "@types/node": "14.11.10",
-    "@types/jest": "26.0.14",
+    "@types/jest": "26.0.15",
     "@types/react-router-dom": "^5.1.6",
     "@types/react-truncate": "^2.3.3",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
