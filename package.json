@@ -26,7 +26,7 @@
   "dependencies": {
     "@craco/craco": "^5.7.0",
     "@types/react": "16.9.53",
-    "@types/react-dom": "16.9.8",
+    "@types/react-dom": "16.9.9",
     "@types/styled-components": "^5.1.4",
     "babel-plugin-lodash": "^3.3.4",
     "bootstrap": "^4.5.3",
