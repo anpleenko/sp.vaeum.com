@@ -24,7 +24,7 @@
     "extends": "react-app"
   },
   "dependencies": {
-    "@craco/craco": "^5.7.0",
+    "@craco/craco": "^5.8.0",
     "@types/react": "16.9.54",
     "@types/react-dom": "16.9.8",
     "@types/styled-components": "^5.1.4",
