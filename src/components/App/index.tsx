@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import WindowSizeListener, { WindowSize } from 'react-window-size-listener';
 
@@ -30,7 +30,7 @@ class MainContainer extends Component<AppProps, AppState> {
     const menuItems: ContentLink[] = [];
 
     if (windowSize.windowWidth < 1024) {
-      menuLinks.map(e => e.items.map(el => menuItems.push(el)));
+      menuLinks.map((e) => e.items.map((el) => menuItems.push(el)));
 
       this.setState({ menuItems });
     } else {
