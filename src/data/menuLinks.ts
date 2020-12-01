@@ -27,11 +27,6 @@ export const menuLinks: MenuLinks[] = [
         description: '',
       },
       {
-        title: 'Яндекс Маркет',
-        url: 'https://market.yandex.ru/',
-        description: '',
-      },
-      {
         title: 'Citilink',
         url: 'https://www.citilink.ru/',
         description: '',

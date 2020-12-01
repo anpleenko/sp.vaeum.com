@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import {
   FooterCopyrightStyled,
@@ -10,7 +10,7 @@ import {
 
 const fullYear = new Date().getFullYear();
 
-export const Footer: FC<{}> = () => (
+export const Footer: FC = () => (
   <FooterMainStyled id="footer">
     <div className="container-fluid">
       <FooterCopyrightStyled href="http://vaeum.com" rel="noreferrer noopener" target="_blank">
