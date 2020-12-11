@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^17.0.1",
-    "@types/jest": "26.0.18",
+    "@types/jest": "26.0.19",
     "@types/node": "14.14.11",
     "@types/react-router-dom": "^5.1.6",
     "@types/react-truncate": "^2.3.3",
