@@ -46,7 +46,7 @@
     "@hot-loader/react-dom": "^17.0.1",
     "@types/jest": "26.0.19",
     "@types/node": "14.14.19",
-    "@types/react-router-dom": "^5.1.6",
+    "@types/react-router-dom": "^5.1.7",
     "@types/react-truncate": "^2.3.3",
     "@typescript-eslint/eslint-plugin": "^4.11.1",
     "@typescript-eslint/parser": "^4.11.1",
