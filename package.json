@@ -24,7 +24,7 @@
     "extends": "react-app"
   },
   "dependencies": {
-    "@craco/craco": "^5.9.0",
+    "@craco/craco": "^6.1.0",
     "@types/react": "17.0.0",
     "@types/react-dom": "17.0.0",
     "@types/styled-components": "^5.1.7",
@@ -48,7 +48,7 @@
     "@types/node": "14.14.22",
     "@types/react-router-dom": "^5.1.7",
     "@types/react-truncate": "^2.3.3",
-    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
     "eslint": "^7.19.0",
     "eslint-config-airbnb-typescript": "^12.0.0",
