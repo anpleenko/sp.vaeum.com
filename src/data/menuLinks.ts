@@ -1,6 +1,6 @@
-import { MenuLinks } from './interfaces';
+import { MenuLink } from './interfaces';
 
-export const menuLinks: MenuLinks[] = [
+export const menuLinks: MenuLink[] = [
   {
     label: 'Магазины',
     items: [

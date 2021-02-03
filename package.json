@@ -3,9 +3,9 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "build": "craco build --config craco.config.prod.js",
+    "build": "craco build",
     "eject": "react-scripts eject",
-    "start": "craco start --config craco.config.dev.js",
+    "start": "craco start",
     "test": "craco test"
   },
   "browserslist": {
@@ -28,14 +28,11 @@
     "@types/react": "17.0.1",
     "@types/react-dom": "17.0.0",
     "@types/styled-components": "^5.1.7",
-    "babel-plugin-lodash": "^3.3.4",
     "bootstrap": "^4.6.0",
     "craco-less": "^1.17.1",
-    "craco-plugin-react-hot-reload": "0.1.0",
     "css.modifiers": "^1.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-hot-loader": "^4.13.0",
     "react-scripts": "4.0.1",
     "react-truncate": "^2.4.0",
     "react-window-size-listener": "^1.5.4",
@@ -43,7 +40,6 @@
     "typescript": "4.1.3"
   },
   "devDependencies": {
-    "@hot-loader/react-dom": "^17.0.1",
     "@types/jest": "26.0.20",
     "@types/node": "14.14.22",
     "@types/react-router-dom": "^5.1.7",

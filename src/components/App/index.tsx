@@ -1,5 +1,4 @@
-import { Component } from 'react';
-import { hot } from 'react-hot-loader';
+import { FC, useCallback, useState } from 'react';
 import WindowSizeListener, { WindowSize } from 'react-window-size-listener';
 
 import { Header } from 'components/Header';
@@ -14,49 +13,29 @@ import 'bootstrap/dist/css/bootstrap-grid.css';
 import { GlobalStyles } from 'globalStyles';
 import { ContentLink } from 'data/interfaces';
 
-import { AppProps, AppState } from './interfaces';
-import { WrapperStyled } from './styles';
+export const App: FC = () => {
+  const [menuItems, setMenuItems] = useState<ContentLink[]>([]);
+  const linksList = popularLinks.concat(menuItems, contentLinks);
 
-class MainContainer extends Component<AppProps, AppState> {
-  constructor(props: AppProps) {
-    super(props);
-
-    this.state = {
-      menuItems: [],
-    };
-  }
-
-  handlerResize = (windowSize: WindowSize) => {
-    const menuItems: ContentLink[] = [];
-
+  const handlerResize = useCallback((windowSize: WindowSize): void => {
     if (windowSize.windowWidth < 1024) {
-      menuLinks.map((e) => e.items.map((el) => menuItems.push(el)));
+      const links = menuLinks.map((link) => link.items).reduce((acc, linkItem) => acc.concat(linkItem), []);
 
-      this.setState({ menuItems });
+      setMenuItems(links);
     } else {
-      this.setState({ menuItems: [] });
+      setMenuItems([]);
     }
-  };
+  }, []);
 
-  render() {
-    const { menuItems } = this.state;
-    const linksList = popularLinks.concat(menuItems, contentLinks);
-
-    return (
-      <>
-        <GlobalStyles />
-
-        <Header />
-
-        <WrapperStyled className="container-fluid main pl0 pr0" id="main">
-          <WindowSizeListener onResize={this.handlerResize} />
-          <LinksList contentLinks={linksList} />
-        </WrapperStyled>
-
-        <Footer />
-      </>
-    );
-  }
-}
-
-export const App = hot(module)(MainContainer);
+  return (
+    <>
+      <GlobalStyles />
+      <Header />
+      <div className="container-fluid main pl0 pr0" id="main">
+        <WindowSizeListener onResize={handlerResize} />
+        <LinksList contentLinks={linksList} />
+      </div>
+      <Footer />
+    </>
+  );
+};

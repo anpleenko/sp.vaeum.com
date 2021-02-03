@@ -1,4 +1,4 @@
-export interface MenuLinks {
+export interface MenuLink {
   label: string;
   items: ContentLink[];
 }
