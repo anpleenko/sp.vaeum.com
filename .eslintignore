@@ -2,3 +2,4 @@
 .huskyrc.js
 .prettierrc.js
 .lintstagedrc.js
+craco.config.js
