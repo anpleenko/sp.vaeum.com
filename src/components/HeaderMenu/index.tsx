@@ -3,9 +3,10 @@ import { FC } from 'react';
 import { menuLinks } from 'data/menuLinks';
 
 import { MenuNavStyled, AppNameStyled, MenuLinkStyled } from './styles';
+import { HeaderMenuProps } from './interfaces';
 
-export const HeaderMenu: FC = () => (
-  <MenuNavStyled>
+export const HeaderMenu: FC<HeaderMenuProps> = ({ dataTestid }) => (
+  <MenuNavStyled data-testid={dataTestid}>
     <ul className="lsn mb0 pl0 mt0 clearfix">
       {menuLinks.map((menuLink) => (
         <li key={menuLink.label}>
