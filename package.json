@@ -30,6 +30,7 @@
     "bootstrap": "^4.6.0",
     "craco-less": "^1.17.1",
     "css.modifiers": "^1.0.0",
+    "jest-styled-components": "^7.0.3",
     "playwright": "^1.8.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
