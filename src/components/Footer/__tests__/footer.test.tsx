@@ -17,4 +17,11 @@ describe('Footer component', () => {
     const { getByTestId } = render(<Footer />);
     expect(getByTestId('footerTime')).toBeInTheDocument();
   });
+
+  it('should footer date equal current date', async () => {
+    const { getByText } = render(<Footer />);
+    const fullYear = new Date().getFullYear();
+
+    expect(getByText(fullYear, { exact: false })).toBeInTheDocument();
+  });
 });

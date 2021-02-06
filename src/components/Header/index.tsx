@@ -1,6 +1,8 @@
 import { FC } from 'react';
 
-import { HeaderMenu } from 'components/HeaderMenu';
+import { menuLinks } from 'data/menuLinks';
+
+import { HeaderMenu } from '../HeaderMenu';
 
 import { HeaderStyled, LogoStyled } from './styles';
 
@@ -10,7 +12,7 @@ export const Header: FC = () => (
       <LogoStyled className="cur" data-testid="headerLogo">
         Bookmarks
       </LogoStyled>
-      <HeaderMenu dataTestid="headerMenu" />
+      <HeaderMenu dataTestid="headerMenu" menuLinks={menuLinks} />
     </div>
   </HeaderStyled>
 );
