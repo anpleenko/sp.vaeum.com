@@ -6,3 +6,7 @@ minApprovals:
 
 requiredLabels:
   - merge
+  - dependencies
+
+blockingLabels:
+  - blocked
