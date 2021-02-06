@@ -31,7 +31,7 @@ export const App: FC = () => {
     <>
       <GlobalStyles />
       <Header />
-      <div className="container-fluid main pl0 pr0" id="main">
+      <div className="container-fluid main pl0 pr0" id="main" data-testid="appMainBlock">
         <WindowSizeListener onResize={handlerResize} />
         <LinksList contentLinks={linksList} />
       </div>

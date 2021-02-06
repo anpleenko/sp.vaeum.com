@@ -11,7 +11,7 @@ import {
 const fullYear = new Date().getFullYear();
 
 export const Footer: FC = () => (
-  <FooterMainStyled id="footer">
+  <FooterMainStyled id="footer" data-testid="footerContainer">
     <div className="container-fluid">
       <FooterCopyrightStyled href="http://vaeum.com" rel="noreferrer noopener" target="_blank">
         Наш блог
@@ -26,7 +26,7 @@ export const Footer: FC = () => (
           Сообщить о проблеме
         </FooterLinkStyled>
 
-        <FooterYearStyled>{`${fullYear} г.`}</FooterYearStyled>
+        <FooterYearStyled data-testid="footerTime">{`${fullYear} г.`}</FooterYearStyled>
       </FooterRightStyled>
     </div>
   </FooterMainStyled>
