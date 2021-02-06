@@ -3,3 +3,6 @@
 minApprovals:
   MEMBER: 0
   COLLABORATOR: 0
+
+requiredLabels:
+  - merge
