@@ -8,10 +8,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install dependencies and build
+      - name: Install dependencies
         run: |
           npm ci
+
+      - name: Tests, linting and etc
+        run: |
+          npm run lint:eslint
           npm test
+
+      - name: Build static
+        run: |
           npm run build
 
       - name: Build the Docker image

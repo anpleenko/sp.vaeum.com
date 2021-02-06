@@ -5,6 +5,7 @@
   "scripts": {
     "build": "craco build",
     "eject": "react-scripts eject",
+    "lint:eslint": "eslint --ext .ts,.tsx --fix --cache .",
     "start": "craco start",
     "test": "craco test"
   },
