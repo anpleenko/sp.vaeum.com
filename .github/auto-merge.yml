@@ -5,7 +5,6 @@ minApprovals:
   COLLABORATOR: 0
 
 requiredLabels:
-  - merge
   - dependencies
 
 blockingLabels:
