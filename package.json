@@ -29,7 +29,7 @@
     "@types/lodash": "^4.14.168",
     "@types/node": "^14.14.26",
     "@types/react": "^17.0.1",
-    "@types/react-dom": "^17.0.0",
+    "@types/react-dom": "^17.0.1",
     "@types/react-router-dom": "^5.1.7",
     "@types/react-truncate": "^2.3.3",
     "@types/styled-components": "^5.1.7",
