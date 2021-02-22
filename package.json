@@ -50,7 +50,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "fast-check": "^2.13.0",
     "jest-styled-components": "^7.0.3",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "playwright": "^1.8.1",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
