@@ -263,7 +263,7 @@ export const menuLinks: MenuLink[] = [
       },
       {
         title: 'Jira',
-        url: 'https://jira.pcbltools.ru/jira/secure/RapidBoard.jspa?rapidView=71',
+        url: 'https://jira.pcbltools.ru/jira/secure/Dashboard.jspa',
         description: '',
       },
       {
@@ -278,7 +278,7 @@ export const menuLinks: MenuLink[] = [
       },
       {
         title: 'Jenkins',
-        url: 'https://jenkins.pcbltools.ru/',
+        url: 'https://jenkins-dev.pcbltools.ru',
         description: '',
       },
       {
