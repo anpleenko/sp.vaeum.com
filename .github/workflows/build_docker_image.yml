@@ -25,7 +25,7 @@ jobs:
           npm run build
 
       - name: Build the Docker image
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         run: |
           docker login docker.pkg.github.com -u anpleenko -p ${{ secrets.TOKEN }}
           docker build . --file Dockerfile --tag bookmarks
@@ -34,7 +34,7 @@ jobs:
 
       - name: SSH connect
         uses: garygrossgarten/github-action-ssh@release
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         with:
           command: cd /usr/src/docker && ./up.sh
           host: ${{ secrets.HOST }}
