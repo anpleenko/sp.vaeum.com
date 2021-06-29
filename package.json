@@ -36,7 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
     "bootstrap": "^5.0.2",
-    "craco-less": "^1.17.1",
+    "craco-less": "^1.18.0",
     "css.modifiers": "^1.0.0",
     "eslint": "^7.29.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
