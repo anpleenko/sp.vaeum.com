@@ -27,10 +27,10 @@ jobs:
       - name: Build the Docker image
         if: github.ref == 'refs/heads/main'
         run: |
-          docker login docker.pkg.github.com -u anpleenko -p ${{ secrets.TOKEN }}
+          docker login ghcr.io -u anpleenko -p ${{ secrets.TOKEN }}
           docker build . --file Dockerfile --tag bookmarks
-          docker tag bookmarks docker.pkg.github.com/7qw/sp.vaeum.com/bookmarks-front:latest
-          docker push docker.pkg.github.com/7qw/sp.vaeum.com/bookmarks-front:latest
+          docker tag bookmarks ghcr.io/7qw/sp.vaeum.com/bookmarks-front:latest
+          docker push ghcr.io/7qw/sp.vaeum.com/bookmarks-front:latest
 
       - name: SSH connect
         uses: garygrossgarten/github-action-ssh@release
