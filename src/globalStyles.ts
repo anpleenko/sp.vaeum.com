@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
     background: #f7f7f7;
     -webkit-font-smoothing: subpixel-antialiased;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
   }
 
   #root {
