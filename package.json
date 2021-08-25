@@ -7,7 +7,9 @@
     "eject": "react-scripts eject",
     "lint:eslint": "eslint --ext .ts,.tsx --fix --cache .",
     "start": "craco start",
-    "test": "craco test"
+    "test": "craco test",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   },
   "browserslist": {
     "production": [
@@ -63,7 +65,7 @@
     "typescript": "^4.3.5"
   },
   "devDependencies": {
-    "husky": "^7.0.1",
+    "husky": "^7.0.0",
     "imagemin-lint-staged": "^0.4.0",
     "lint-staged": "^11.1.2",
     "sort-package-json": "^1.50.0"
