@@ -2,35 +2,53 @@ name: Create Docker image
 
 on: [push, pull_request]
 
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-20.04
+    permissions:
+      contents: read
+      packages: write
+
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
 
-      - name: Install dependencies
-        run: |
-          npm ci --production
-
-      - name: Tests, linting and etc
-        run: |
-          npm run lint:eslint
-          npm test
-
       - name: Build static
         run: |
+          npm ci --production
+          npm run lint:eslint
+          npm test
           npm run build
 
-      - name: Build the Docker image
+      - name: Log in to the Container registry
+        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         if: github.ref == 'refs/heads/main'
-        run: |
-          docker login ghcr.io -u anpleenko -p ${{ secrets.TOKEN }}
-          docker build . --file Dockerfile --tag bookmarks
-          docker tag bookmarks ghcr.io/7qw/sp.vaeum.com/bookmarks-front:latest
-          docker push ghcr.io/7qw/sp.vaeum.com/bookmarks-front:latest
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GH_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        if: github.ref == 'refs/heads/main'
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        if: github.ref == 'refs/heads/main'
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
 
       - name: SSH connect
         uses: garygrossgarten/github-action-ssh@release
