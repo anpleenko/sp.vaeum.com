@@ -36,7 +36,7 @@
     "@types/react-truncate": "^2.3.4",
     "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
-    "@typescript-eslint/parser": "^4.30.0",
+    "@typescript-eslint/parser": "^4.31.0",
     "bootstrap": "^5.1.0",
     "craco-less": "^1.20.0",
     "css.modifiers": "^1.0.0",
