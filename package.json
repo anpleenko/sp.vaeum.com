@@ -68,6 +68,6 @@
   "devDependencies": {
     "imagemin-lint-staged": "^0.4.0",
     "lint-staged": "^11.2.6",
-    "sort-package-json": "^1.52.0"
+    "sort-package-json": "^1.53.1"
   }
 }
