@@ -34,7 +34,7 @@
     "@types/react-dom": "^17.0.11",
     "@types/react-router-dom": "^5.3.2",
     "@types/react-truncate": "^2.3.4",
-    "@types/styled-components": "^5.1.15",
+    "@types/styled-components": "^5.1.16",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.5.0",
     "bootstrap": "^5.1.3",
