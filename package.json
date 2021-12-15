@@ -5,6 +5,7 @@
   "scripts": {
     "build": "react-scripts build",
     "eject": "react-scripts eject",
+    "lint:eslint": "eslint --ext .ts,.tsx --fix --cache .",
     "prepare": "husky install",
     "start": "react-scripts start",
     "test": "react-scripts test"
