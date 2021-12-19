@@ -15,11 +15,11 @@ describe('Footer component', () => {
 
   it('should header contains logo, and logo has data-testid attr', async () => {
     render(<Header />);
-    expect(screen.getByText('headerLogo')).toBeInTheDocument();
+    expect(screen.getByTestId('headerLogo')).toBeInTheDocument();
   });
 
   it('should header contains menu', async () => {
     render(<Header />);
-    expect(screen.getByText('headerMenu')).toBeInTheDocument();
+    expect(screen.getByTestId('headerMenu')).toBeInTheDocument();
   });
 });
