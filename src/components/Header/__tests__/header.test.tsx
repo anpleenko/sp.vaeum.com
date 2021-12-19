@@ -10,7 +10,7 @@ describe('Footer component', () => {
 
   it('should header component has data-testid attr', async () => {
     render(<Header />);
-    expect(screen.getByText('headerComponent')).toBeInTheDocument();
+    expect(screen.getByTestId('headerComponent')).toBeInTheDocument();
   });
 
   it('should header contains logo, and logo has data-testid attr', async () => {
