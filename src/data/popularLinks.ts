@@ -82,7 +82,7 @@ export const popularLinks: ContentLink[] = [
   {
     title: 'Wikianime',
     description: 'Российский коммерческий банк',
-    url: 'http://wikianime.ru/',
+    url: 'https://wikianime.tv/',
     logo: 'wikianime',
   },
   {
