@@ -43,11 +43,6 @@ export const contentLinks: ContentLink[] = [
     url: 'https://kvartplata.ru/room/lk',
   },
   {
-    description: 'Личный кабинет для оплаты комуналки',
-    title: 'Оплата за мусор',
-    url: 'https://muk.jfservice.ru/sobstv/charges',
-  },
-  {
     description: 'Услуги связи',
     title: 'НЭСК',
     url: 'https://sis.nesk.ru/',
