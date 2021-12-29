@@ -88,7 +88,7 @@ export const popularLinks: ContentLink[] = [
   {
     title: 'Shikimori',
     description: 'Энциклопедия аниме и манги',
-    url: 'https://shikimori.org/',
+    url: 'https://shikimori.one/',
     logo: 'shikimori',
   },
   {
