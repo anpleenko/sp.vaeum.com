@@ -1,6 +1,7 @@
 {
   "name": "sp.vaeum.com",
   "version": "0.1.0",
+  "private": true,
   "scripts": {
     "build": "vite build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --cache",
