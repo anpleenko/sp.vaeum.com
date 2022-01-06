@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Reboot } from 'styled-reboot';
+import { Container } from 'styled-bootstrap-grid';
 
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
@@ -16,9 +17,9 @@ export const App: FC = () => {
       <Reboot />
       <GlobalStyles />
       <Header />
-      <div className="container-fluid main pl0 pr0" id="main" data-testid="appMainBlock">
+      <Container fluid className="main pl0 pr0" id="main" data-testid="appMainBlock">
         <LinksList contentLinks={linksList} />
-      </div>
+      </Container>
       <Footer />
     </>
   );

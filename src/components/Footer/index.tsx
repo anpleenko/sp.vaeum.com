@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Container } from 'styled-bootstrap-grid';
 
 import {
   FooterCopyrightStyled,
@@ -12,7 +13,7 @@ const fullYear = new Date().getFullYear();
 
 export const Footer: FC = () => (
   <FooterMainStyled id="footer" data-testid="footerContainer">
-    <div className="container-fluid">
+    <Container fluid>
       <FooterCopyrightStyled href="http://vaeum.com" rel="noreferrer noopener" target="_blank">
         Наш блог
       </FooterCopyrightStyled>
@@ -28,6 +29,6 @@ export const Footer: FC = () => (
 
         <FooterYearStyled data-testid="footerTime">{`${fullYear} г.`}</FooterYearStyled>
       </FooterRightStyled>
-    </div>
+    </Container>
   </FooterMainStyled>
 );
