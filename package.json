@@ -1,6 +1,6 @@
 {
-  "name": "vite-react-typescript-starter",
-  "version": "0.0.0",
+  "name": "sp.vaeum.com",
+  "version": "0.1.0",
   "scripts": {
     "build": "vite build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --cache",
