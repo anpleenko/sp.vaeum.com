@@ -9,6 +9,8 @@ import { contentLinks } from 'data/contentLinks';
 import { popularLinks } from 'data/popularLinks';
 import { GlobalStyles } from 'globalStyles';
 
+import 'css.modifiers';
+
 export const App: FC = () => {
   const linksList = popularLinks.concat(contentLinks);
 
