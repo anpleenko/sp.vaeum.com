@@ -6,7 +6,9 @@ export const FooterCopyrightStyled = styled.a`
   font-size: 13px;
 `;
 
-export const FooterMainStyled = styled.footer``;
+export const FooterMainStyled = styled.footer`
+  grid-area: footer;
+`;
 
 export const FooterYearStyled = styled.p`
   float: left;
