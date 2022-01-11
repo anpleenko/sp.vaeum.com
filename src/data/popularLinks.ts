@@ -81,9 +81,15 @@ export const popularLinks: ContentLink[] = [
   },
   {
     title: 'Wikianime',
-    description: 'Российский коммерческий банк',
+    description: '',
     url: 'https://wikianime.tv/',
     logo: 'wikianime',
+  },
+  {
+    title: 'Darklibria',
+    description: '',
+    url: 'https://darklibria.it/',
+    logo: 'darklibria',
   },
   {
     title: 'Shikimori',
