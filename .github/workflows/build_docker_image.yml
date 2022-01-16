@@ -1,6 +1,6 @@
 name: Create Docker image
 
-on: [push, pull_request]
+on: [pull_request]
 
 env:
   REGISTRY: ghcr.io
@@ -12,20 +12,26 @@ jobs:
     permissions:
       contents: read
       packages: write
-
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: 17
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Linting, Testing and Type checking
+        run: pnpm ci
 
       - name: Build static
-        run: |
-          npm ci
-          npm run lint
-          npm run tsc
-          npm test
-          npm run build
+        run: pnpm build
 
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9

@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+import Card from '@mui/material/Card';
+import Link from '@mui/material/Link';
 
 import { LogoStyledProps } from './interface';
 
@@ -6,21 +8,16 @@ const heightIcon = 50;
 const widthIcon = 50;
 const linksMargin = 30;
 
-export const LinksListStyled = styled.ul`
+export const LinksListStyled = styled.div`
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(${widthIcon + linksMargin * 3}px, 1fr));
   justify-items: center;
-  grid-gap: 20px 4px;
+  grid-gap: 32px 0px;
 `;
 
-export const ListItemStyled = styled.li`
-  list-style: none;
-`;
-
-export const LinkStyled = styled.a`
-  text-decoration: none;
+export const LinkStyled = styled(Link)`
   color: #333;
   font-weight: bold;
   display: block;
@@ -56,14 +53,8 @@ export const DumpStyled = styled(AvatarStyled)`
   vertical-align: middle;
 `;
 
-export const LinkTextStyled = styled.div`
-  width: ${widthIcon + linksMargin * 3}px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+export const CardStyled = styled(Card)`
+  background-image: none !important;
   text-align: center;
-
-  @media (max-width: 468px) {
-    font-size: 12px;
-  }
+  box-shadow: none !important;
 `;

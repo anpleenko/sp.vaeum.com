@@ -4,6 +4,7 @@ export const HeaderStyled = styled.header`
   background: #fff;
   height: 40px;
   border-bottom: 1px solid #eee;
+  grid-area: nav;
 
   @media (max-width: 1023px) {
     display: none;
