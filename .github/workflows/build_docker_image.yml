@@ -29,7 +29,6 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Linting, testing and Type checking
-        run: pnpm install --frozen-lockfile
         run: |
           pnpm lint
           pnpm tsc
