@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "vite build",
+    "ci": "pnpm lint && pnpm tsc && pnpm test",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --cache",
     "prepare": "is-ci || husky install",
     "start": "vite",

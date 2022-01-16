@@ -17,7 +17,7 @@ jobs:
 
       - uses: pnpm/action-setup@v2
         with:
-          version: latest
+          version: 6
 
       - name: Install Node.js
         uses: actions/setup-node@v2
@@ -28,11 +28,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Linting, testing and Type checking
-        run: |
-          pnpm lint
-          pnpm tsc
-          pnpm test
+      - name: Linting, Testing and Type checking
+        run: pnpm ci
 
       - name: Build static
         run: pnpm build
