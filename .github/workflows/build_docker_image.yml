@@ -1,6 +1,6 @@
 name: Create Docker image
 
-on: [pull_request]
+on: [push, pull_request]
 
 env:
   REGISTRY: ghcr.io
