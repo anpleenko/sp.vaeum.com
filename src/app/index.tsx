@@ -1,17 +1,15 @@
 import { FC } from 'react';
-import { Reboot } from 'styled-reboot';
+import CssBaseline from '@mui/material/CssBaseline';
 
-import { GlobalStyles } from 'globalStyles';
-import { Header } from 'components/Header';
-import { Footer } from 'components/Footer';
-import LinksListPage from 'pages/links-list';
+import { Routing } from 'pages';
+
+import { GlobalStyles } from './globalStyles';
+import { Providers } from './providers';
 
 export const App: FC = () => (
-  <>
-    <Reboot />
+  <Providers>
+    <CssBaseline />
     <GlobalStyles />
-    <Header />
-    <LinksListPage />
-    <Footer />
-  </>
+    <Routing />
+  </Providers>
 );
