@@ -13,9 +13,7 @@ import { ContainerStyled } from './styles';
 const LinksListPage: FC = () => (
   <>
     <AppTopBar>
-      {menuLinks.map(({ items, label }) => (
-        <AppBarMenu key={label} items={items} label={label} data-testid="headerMenu" />
-      ))}
+      <AppBarMenu menuLinks={menuLinks} />
     </AppTopBar>
 
     <ContainerStyled data-testid="appMainBlock">
