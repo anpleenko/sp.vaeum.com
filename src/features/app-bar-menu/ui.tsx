@@ -1,54 +1,31 @@
-import { FC, useState, MouseEvent } from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import { FC } from 'react';
 import Link from '@mui/material/Link';
 
-import { MenuLink } from 'data/interfaces';
+import { AppBarMenuStyled } from './styles';
+import { AppBarMenuProps } from './interfaces';
+import { HEADER_MENU_ITEM_DATA_TESTID, HEADER_MENU } from './constants';
 
-import { MENU_BUTTON_DATA_TESTID, MENU_ITEM_DATA_TESTID } from './constants';
+// https://css-tricks.com/solved-with-css-dropdown-menus/
+export const AppBarMenu: FC<AppBarMenuProps> = ({ menuLinks }) => (
+  <AppBarMenuStyled role="navigation" data-testid={HEADER_MENU}>
+    <ul>
+      {menuLinks.map((menu) => (
+        <li key={menu.label} data-testid={HEADER_MENU_ITEM_DATA_TESTID}>
+          {menu.label}
 
-export const AppBarMenu: FC<MenuLink> = ({ label, items }) => {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  return (
-    <>
-      <Button
-        id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-        color="inherit"
-        data-testid={MENU_BUTTON_DATA_TESTID}
-      >
-        {label}
-      </Button>
-
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
-      >
-        {items.map((item) => (
-          <MenuItem key={item.url} onClick={handleClose} data-testid={MENU_ITEM_DATA_TESTID}>
-            <Link href={`http://${item.url}`} underline="none" color="inherit" target="_blank">
-              {item.title}
-            </Link>
-          </MenuItem>
-        ))}
-      </Menu>
-    </>
-  );
-};
+          {menu.items.length && (
+            <ul className="dropdown" aria-label="submenu">
+              {menu.items.map((item) => (
+                <li key={item.title}>
+                  <Link href={`http://${item.url}`} underline="none" target="_blank">
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </AppBarMenuStyled>
+);
