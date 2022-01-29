@@ -33,7 +33,7 @@ specifiers:
   imagemin-lint-staged: ^0.4.0
   is-ci: ^3.0.1
   jest: ^27.4.7
-  lint-staged: ^12.3.1
+  lint-staged: ^12.3.2
   lodash: ^4.17.21
   prettier: ^2.5.1
   react: ^17.0.2
@@ -89,7 +89,7 @@ devDependencies:
   husky: 7.0.4
   imagemin-lint-staged: 0.4.0
   jest: 27.4.7_ts-node@10.4.0
-  lint-staged: 12.3.1
+  lint-staged: 12.3.2
   prettier: 2.5.1
   sort-package-json: 1.53.1
   ts-jest: 27.1.3_a7e53b5e5b59e71a0fd4d8cf128393d5
@@ -4804,8 +4804,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: false
 
-  /lint-staged/12.3.1:
-    resolution: {integrity: sha512-Ocht/eT+4/siWOZDJpNUKcKX2UeWW/pDbohJ4gRsrafAjBi79JK8kiNVk2ciIVNKdw0Q4ABptl2nr6uQAlRImw==}
+  /lint-staged/12.3.2:
+    resolution: {integrity: sha512-gtw4Cbj01SuVSfAOXC6ivd/7VKHTj51yj5xV8TgktFmYNMsZzXuSd5/brqJEA93v63wL7R6iDlunMANOechC0A==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
