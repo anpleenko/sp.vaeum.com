@@ -22,26 +22,17 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 17
+          node-version: 16.x
+          cache: 'yarn'
 
-      - name: Cache pnpm modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-
-
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6
-          run_install: true
+      - name: Install dependencies 📦
+        run: yarn install --frozen-lockfile
 
       - name: Linting, Testing and Type checking
-        run: pnpm ci
+        run: yarn ci
 
       - name: Build static
-        run: pnpm build
+        run: yarn build
 
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
