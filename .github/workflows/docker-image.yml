@@ -8,9 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Inject slug/short variables
-        uses: rlespinasse/github-slug-action@v3.x
-
       - name: Use Node.js 16
         uses: actions/setup-node@v2
         with:
@@ -40,4 +37,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
-          tags: ${{ github.repository }}:${{ env.GITHUB_REF_SLUG }}
+          tags: ${{ github.repository }}:latest
