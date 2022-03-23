@@ -1,4 +1,4 @@
-name: create docker image
+name: lint, build, deploy
 
 on: [push, pull_request]
 
