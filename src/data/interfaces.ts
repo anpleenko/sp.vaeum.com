@@ -1,8 +1,3 @@
-export interface MenuLink {
-  label: string;
-  items: ContentLink[];
-}
-
 export interface ContentLink {
   description: string;
   title: string;

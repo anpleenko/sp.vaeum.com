@@ -1,34 +1,50 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
   extends: [
-    'airbnb-typescript',
     'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended',
     'prettier',
   ],
   plugins: ['@typescript-eslint', 'jest', 'jsx-a11y', 'prettier', 'react', 'react-hooks', 'import'],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+  overrides: [
+    {
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:jest/recommended', 'plugin:testing-library/react'],
     },
-    project: './tsconfig.json',
-    ecmaVersion: 2018,
-    sourceType: 'module',
-    tsconfigRootDir: '.',
-  },
+    {
+      files: ['**/*.ts?(x)'],
+      parser: '@typescript-eslint/parser',
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:import/typescript',
+        'airbnb-typescript',
+        'plugin:@typescript-eslint/eslint-recommended',
+      ],
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+        project: './tsconfig.json',
+        ecmaVersion: 2018,
+        sourceType: 'module',
+        tsconfigRootDir: '.',
+      },
+    },
+  ],
   env: {
     browser: true,
     es6: true,
     jest: true,
+    amd: true,
+    node: true,
   },
   settings: {
     react: {
       version: 'detect',
+    },
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
       node: {
@@ -39,12 +55,7 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
     'prettier/prettier': 'error',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-empty-interface': 'off',
-    'import/prefer-default-export': 'off',
-    // 'import/no-default-export': 'error',
     'import/order': [
       'error',
       {

@@ -1,11 +1,14 @@
 import type { Config } from '@jest/types';
 
 const config: Config.InitialOptions = {
-  moduleDirectories: ['node_modules', 'src'],
-  preset: 'ts-jest',
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-  testEnvironment: 'jsdom',
   verbose: true,
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  moduleDirectories: ['node_modules', 'src'],
+  setupFilesAfterEnv: ['<rootDir>/src/setup-jest.ts'],
+  moduleNameMapper: {
+    '^.+\\.(css|less)$': 'identity-obj-proxy',
+  },
 };
 
 export default config;

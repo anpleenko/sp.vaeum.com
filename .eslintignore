@@ -1,2 +1,6 @@
-dist/
-.eslintrc.js
+node_modules
+dist
+coverage
+.eslintcache
+!.lintstagedrc.js
+!.prettierrc.js

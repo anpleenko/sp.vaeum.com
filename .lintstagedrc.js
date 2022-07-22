@@ -1,5 +1,9 @@
 module.exports = {
-  '*.{ts,tsx}': ['eslint --fix --ext .js,.jsx,.ts,.tsx', 'prettier --write'],
+  '*.{tsx,ts,jsx,js}': [
+    'prettier --write',
+    'eslint --max-warnings=0 --fix',
+    'jest --bail --findRelatedTests --passWithNoTests',
+  ],
   '*.{png,jpeg,jpg,gif,svg}': ['imagemin-lint-staged'],
   'package.json': ['sort-package-json', 'prettier --write'],
 };
