@@ -1,37 +1,24 @@
 module.exports = {
+  root: true,
+  parser: '@typescript-eslint/parser',
   extends: [
     'eslint:recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended',
+    'plugin:jest/recommended',
+    'plugin:testing-library/react',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/typescript',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/eslint-recommended',
     'prettier',
   ],
   plugins: ['@typescript-eslint', 'jest', 'jsx-a11y', 'prettier', 'react', 'react-hooks', 'import'],
-  overrides: [
-    {
-      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-      extends: ['plugin:jest/recommended', 'plugin:testing-library/react'],
-    },
-    {
-      files: ['**/*.ts?(x)'],
-      parser: '@typescript-eslint/parser',
-      extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:import/typescript',
-        'airbnb-typescript',
-        'plugin:@typescript-eslint/eslint-recommended',
-      ],
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-        project: './tsconfig.json',
-        ecmaVersion: 2018,
-        sourceType: 'module',
-        tsconfigRootDir: '.',
-      },
-    },
-  ],
+  parserOptions: {
+    project: 'tsconfig.json',
+    sourceType: 'module',
+  },
   env: {
     browser: true,
     es6: true,
