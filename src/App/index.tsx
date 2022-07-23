@@ -17,7 +17,7 @@ export const App = () => (
           rel="noreferrer noopener"
         >
           {link.logo && (
-            <div className="w-[80px] h-[80px] mt-0 mb-[12px] ml-auto mr-auto rounded-full bg-top bg-no-repeat bg-cover bg-white p-1">
+            <div className="w-[80px] h-[80px] mt-0 mb-[12px] ml-auto mr-auto rounded-full bg-top bg-no-repeat bg-cover">
               <img src={`/icons/${link.logo}.png`} alt={link.title} width={80} height={80} className="rounded-full" />
             </div>
           )}
