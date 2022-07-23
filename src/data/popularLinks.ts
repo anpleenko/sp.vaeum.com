@@ -2,7 +2,7 @@ import { ContentLink } from './interfaces';
 
 export const popularLinks: ContentLink[] = [
   {
-    title: 'You Tube',
+    title: 'YouTube',
     description: 'Российский коммерческий банк',
     url: 'youtube.com',
     logo: 'youtube',
