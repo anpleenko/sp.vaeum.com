@@ -2,11 +2,6 @@ import { ContentLink } from './interfaces';
 
 export const menuLinks: ContentLink[] = [
   {
-    title: 'Юлмарт',
-    url: 'ulmart.ru',
-    description: '',
-  },
-  {
     logo: 'ozon',
     title: 'Озон',
     url: 'ozon.ru',
