@@ -124,11 +124,6 @@ export const menuLinks: ContentLink[] = [
     description: '',
   },
   {
-    title: 'Gists',
-    url: 'gist.github.com/anpleenko?direction=desc&sort=updated',
-    description: '',
-  },
-  {
     title: 'Bitbucket',
     url: 'bitbucket.org',
     description: '',
