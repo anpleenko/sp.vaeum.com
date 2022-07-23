@@ -94,11 +94,6 @@ export const contentLinks: ContentLink[] = [
   },
   {
     description: 'Торрент трекер',
-    title: 'torrent mac',
-    url: 'torrentmac.org',
-  },
-  {
-    description: 'Торрент трекер',
     title: 'lostfilm',
     url: 'lostfilm.tv',
   },
