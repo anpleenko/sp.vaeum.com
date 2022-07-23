@@ -149,11 +149,6 @@ export const menuLinks: ContentLink[] = [
     description: '',
   },
   {
-    title: 'Gostash',
-    url: 'gostash.it/ru',
-    description: '',
-  },
-  {
     title: 'jsDelivr',
     url: 'jsdelivr.com',
     description: '',
