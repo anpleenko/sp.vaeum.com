@@ -129,11 +129,6 @@ export const menuLinks: ContentLink[] = [
     description: '',
   },
   {
-    title: '123-box',
-    url: '123-box.ru',
-    description: '',
-  },
-  {
     title: 'Gists',
     url: 'gist.github.com/anpleenko?direction=desc&sort=updated',
     description: '',
