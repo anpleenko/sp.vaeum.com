@@ -30,7 +30,7 @@
     "vite-tsconfig-paths": "3.5.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.0.3",
+    "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.0.3",
     "@commitlint/prompt-cli": "17.0.3",
     "@testing-library/dom": "8.16.0",
