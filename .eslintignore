@@ -4,3 +4,5 @@ coverage
 .eslintcache
 !.lintstagedrc.js
 !.prettierrc.js
+jest.config.ts
+vite.config.ts

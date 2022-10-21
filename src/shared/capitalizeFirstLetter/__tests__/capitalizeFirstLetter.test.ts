@@ -1,5 +1,4 @@
 import fc from 'fast-check';
-
 import { capitalizeFirstLetter } from '../index';
 
 describe('CapitalizeFirstLetter properties', () => {
