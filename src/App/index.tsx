@@ -1,8 +1,7 @@
-import { capitalizeFirstLetter } from 'shared/capitalizeFirstLetter';
+import { contentLinks } from 'data/contentLinks';
 import { menuLinks } from 'data/menuLinks';
 import { popularLinks } from 'data/popularLinks';
-import { contentLinks } from 'data/contentLinks';
-
+import { capitalizeFirstLetter } from 'shared/capitalizeFirstLetter';
 import './style.css';
 
 export const App = () => (
@@ -10,8 +9,8 @@ export const App = () => (
     <div className="justify-items-center grid grid-cols-[repeat(auto-fill,_minmax(160px,_1fr))]">
       {[...popularLinks, ...contentLinks, ...menuLinks].map((link) => (
         <a
-          className="no-underline block m-[40px] text-center cursor-pointer link"
           key={link.url}
+          className="no-underline block m-[40px] text-center cursor-pointer link"
           href={`https://${link.url}`}
           target="_blank"
           rel="noreferrer noopener"

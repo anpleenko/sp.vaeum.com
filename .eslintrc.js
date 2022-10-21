@@ -1,54 +1,36 @@
-module.exports = {
-  root: true,
-  parser: '@typescript-eslint/parser',
-  extends: [
-    'eslint:recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:prettier/recommended',
-    'plugin:react/recommended',
-    'plugin:jest/recommended',
-    'plugin:testing-library/react',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/typescript',
-    'airbnb-typescript',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'prettier',
+const { configure, presets } = require('eslint-kit');
+
+module.exports = configure({
+  mode: 'only-errors',
+  presets: [
+    presets.imports({
+      sort: {
+        groups: [
+          // Node.js builtins. You could also generate this regex if you use a `.js` config.
+          // For example: `^(${require("module").builtinModules.join("|")})(/|$)`
+          // Note that if you use the `node:` prefix for Node.js builtins,
+          // you can avoid this complexity: You can simply use "^node:".
+          [
+            '^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)',
+          ],
+          // Packages. `react` related packages come first.
+          ['^react', '^@?\\w'],
+          // Internal packages.
+          ['^(@|@company|@ui|components|utils|config|vendored-lib)(/.*|$)'],
+          // Side effect imports.
+          ['^\\u0000'],
+          // Parent imports. Put `..` last.
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+          // Style imports.
+          ['^.+\\.s?css$'],
+        ],
+      },
+    }),
+    presets.typescript(),
+    presets.prettier(),
+    presets.node(),
+    presets.react({ version: '18.0', newJSXTransform: true }),
   ],
-  plugins: ['@typescript-eslint', 'jest', 'jsx-a11y', 'prettier', 'react', 'react-hooks', 'import'],
-  parserOptions: {
-    project: 'tsconfig.json',
-    sourceType: 'module',
-  },
-  env: {
-    browser: true,
-    es6: true,
-    jest: true,
-    amd: true,
-    node: true,
-  },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
-    'import/resolver': {
-      node: {
-        extensions: ['.ts', '.tsx'],
-        moduleDirectory: ['node_modules', 'src'],
-      },
-    },
-  },
-  rules: {
-    'react/react-in-jsx-scope': 'off',
-    'prettier/prettier': 'error',
-    'import/order': [
-      'error',
-      {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-        'newlines-between': 'always',
-      },
-    ],
-  },
-};
+});
