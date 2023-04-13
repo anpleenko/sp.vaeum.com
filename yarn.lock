@@ -1036,12 +1036,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:17.2.0":
-  version: 17.2.0
-  resolution: "@commitlint/config-conventional@npm:17.2.0"
+"@commitlint/config-conventional@npm:17.6.0":
+  version: 17.6.0
+  resolution: "@commitlint/config-conventional@npm:17.6.0"
   dependencies:
     conventional-changelog-conventionalcommits: ^5.0.0
-  checksum: c91f8f4aac263d907f94c0ddba482f5d5a590bbbc8466c1afcb94bb0a2dfc891561647d8544744a4d0ae4c80034aa9e931197a6cdf2fb1c64f8f9e5e25c01e81
+  checksum: ac62e3904d152adc9e1f7e2613918879fd7c0e44e64c8379ca96a3a8ec76367f23d02c1b0f5745d3749d56ddf458c19ebd2ca09bdf5a48d75ac28026ebb8f848
   languageName: node
   linkType: hard
 
@@ -4216,7 +4216,7 @@ __metadata:
   resolution: "devstand.ru@workspace:."
   dependencies:
     "@commitlint/cli": 17.4.1
-    "@commitlint/config-conventional": 17.2.0
+    "@commitlint/config-conventional": 17.6.0
     "@testing-library/dom": 8.19.1
     "@testing-library/jest-dom": 5.16.5
     "@testing-library/react": 13.4.0
