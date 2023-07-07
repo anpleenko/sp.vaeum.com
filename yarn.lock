@@ -4386,7 +4386,7 @@ __metadata:
     autoprefixer: 10.4.13
     eslint: 8.41.0
     eslint-kit: 8.5.0
-    fast-check: 3.9.0
+    fast-check: 3.11.0
     husky: 8.0.3
     identity-obj-proxy: 3.0.0
     imagemin-lint-staged: 0.5.1
@@ -5607,12 +5607,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-check@npm:3.9.0":
-  version: 3.9.0
-  resolution: "fast-check@npm:3.9.0"
+"fast-check@npm:3.11.0":
+  version: 3.11.0
+  resolution: "fast-check@npm:3.11.0"
   dependencies:
     pure-rand: ^6.0.0
-  checksum: d613687db6e7423e73560c50ab58de65e472dedaeb22daed8875281e7d22c310f6bddf531ac5b1c1cc92d9d4cdbd19fc8329b09b04db2db7e67e51cea93061a6
+  checksum: 6ec642fcfe69faa56a42785cb7b373905357db3c7373add4b84d97b8b0fa2a7efa0e119159d42e5fe5607f64cb3948a1986c45a0484156060ce168186bdbdb4a
   languageName: node
   linkType: hard
 
@@ -8877,15 +8877,6 @@ __metadata:
     object-assign: ^4.0.1
     thenify-all: ^1.0.0
   checksum: 8427de0ece99a07e9faed3c0c6778820d7543e3776f9a84d22cf0ec0a8eb65f6e9aee9c9d353ff9a105ff62d33a9463c6ca638974cc652ee8140cd1e35951c87
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:^3.3.4":
-  version: 3.3.4
-  resolution: "nanoid@npm:3.3.4"
-  bin:
-    nanoid: bin/nanoid.cjs
-  checksum: 2fddd6dee994b7676f008d3ffa4ab16035a754f4bb586c61df5a22cf8c8c94017aadd360368f47d653829e0569a92b129979152ff97af23a558331e47e37cd9c
   languageName: node
   linkType: hard
 

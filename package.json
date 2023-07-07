@@ -44,7 +44,7 @@
     "autoprefixer": "10.4.13",
     "eslint": "8.41.0",
     "eslint-kit": "8.5.0",
-    "fast-check": "3.9.0",
+    "fast-check": "3.11.0",
     "husky": "8.0.3",
     "identity-obj-proxy": "3.0.0",
     "imagemin-lint-staged": "0.5.1",
