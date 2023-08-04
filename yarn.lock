@@ -2303,10 +2303,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.2.5":
-  version: 20.2.5
-  resolution: "@types/node@npm:20.2.5"
-  checksum: 38ce7c7e9d76880dc632f71d71e0d5914fcda9d5e9a7095d6c339abda55ca4affb0f2a882aeb29398f8e09d2c5151f0b6586c81c8ccdfe529c34b1ea3337425e
+"@types/node@npm:20.4.7":
+  version: 20.4.7
+  resolution: "@types/node@npm:20.4.7"
+  checksum: a40d7003f66b56220a2028179e49f950b46fa6dbf860a4a6ecbd6ba7976f05b2f0b31ced39689ec88a7d9e32d07e088c6a06d270b99d5bc13a28291ac2f30ca7
   languageName: node
   linkType: hard
 
@@ -4379,7 +4379,7 @@ __metadata:
     "@testing-library/react-hooks": 8.0.1
     "@testing-library/user-event": 14.4.3
     "@types/jest": 29.2.5
-    "@types/node": 20.2.5
+    "@types/node": 20.4.7
     "@types/react": 18.0.26
     "@types/react-dom": 18.0.10
     "@vitejs/plugin-react": 3.0.1
@@ -8877,15 +8877,6 @@ __metadata:
     object-assign: ^4.0.1
     thenify-all: ^1.0.0
   checksum: 8427de0ece99a07e9faed3c0c6778820d7543e3776f9a84d22cf0ec0a8eb65f6e9aee9c9d353ff9a105ff62d33a9463c6ca638974cc652ee8140cd1e35951c87
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:^3.3.4":
-  version: 3.3.4
-  resolution: "nanoid@npm:3.3.4"
-  bin:
-    nanoid: bin/nanoid.cjs
-  checksum: 2fddd6dee994b7676f008d3ffa4ab16035a754f4bb586c61df5a22cf8c8c94017aadd360368f47d653829e0569a92b129979152ff97af23a558331e47e37cd9c
   languageName: node
   linkType: hard
 
